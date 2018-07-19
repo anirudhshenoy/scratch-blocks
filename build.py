@@ -230,6 +230,7 @@ class Gen_compressed(threading.Thread):
     self.gen_blocks("vertical")
     self.gen_blocks("common")
     self.gen_generator("javascript")
+    self.gen_generator("arduino")
     self.gen_generator("python")
     self.gen_generator("php")
     self.gen_generator("dart")
@@ -349,7 +350,7 @@ class Gen_compressed(threading.Thread):
       for group in [["google-closure-compiler"], dash_args]:
         args.extend(filter(lambda item: item, group))
 
-      proc = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+      proc = subprocess.Popen(args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
       (stdout, stderr) = proc.communicate()
 
       # Build the JSON response.
@@ -592,7 +593,7 @@ if __name__ == "__main__":
 
     # Sanity check the local compiler
     test_args = [closure_compiler, os.path.join("build", "test_input.js")]
-    test_proc = subprocess.Popen(test_args, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    test_proc = subprocess.Popen(test_args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, shell=True)
     (stdout, _) = test_proc.communicate()
     assert stdout == read(os.path.join("build", "test_expect.js"))
 
