@@ -305,7 +305,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     '<block type="control_delete_this_clone" id="control_delete_this_clone"></block>'+
   '</category>'+
   '<category name="Sensing" colour="#4CBFE6" secondaryColour="#2E8EB8">'+
-    '<block type="sensing_touchingobject" id="sensing_touchingobject">'+
+ /*   '<block type="sensing_touchingobject" id="sensing_touchingobject">'+
       '<value name="TOUCHINGOBJECTMENU">'+
         '<shadow type="sensing_touchingobjectmenu"></shadow>'+
       '</value>'+
@@ -323,11 +323,26 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '<shadow type="colour_picker"></shadow>'+
       '</value>'+
     '</block>'+
-    '<block type="sensing_distanceto" id="sensing_distanceto">'+
-      '<value name="DISTANCETOMENU">'+
-        '<shadow type="sensing_distancetomenu"></shadow>'+
+*/  '<block type="sensing_ultrasonic" id="sensing_ultrasonic">'+
+      '<value name="PORT">'+
+        '<shadow type="sensing_ultrasonic"></shadow>'+
+      '</value>'+
+    '</block>' +
+    '<block type="sensing_light" id="sensing_light">'+
+      '<value name="PORT">'+
+        '<shadow type="sensing_light"></shadow>'+
+      '</value>'+
+    '</block>'+ 
+    '<block type="sensing_touch" id="sensing_touch">'+
+      '<value name="PORT">'+
+        '<shadow type="sensing_touch"></shadow>'+
       '</value>'+
     '</block>'+
+    '<block type="sensing_tilt" id="sensing_tilt">'+
+      '<value name="PORT">'+
+        '<shadow type="sensing_tilt"></shadow>'+
+      '</value>'+
+    '</block>'+ /*
     '<block type="sensing_keypressed" id="sensing_keypressed">'+
         '<value name="KEY_OPTION">'+
           '<shadow type="sensing_keyoptions"></shadow>'+
@@ -346,8 +361,8 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
       '</value>'+
     '</block>'+
     '<block type="sensing_current" id="sensing_current"></block>'+
-    '<block type="sensing_dayssince2000" id="sensing_dayssince2000"></block>'+
-  '</category>'+
+    '<block type="sensing_dayssince2000" id="sensing_dayssince2000"></block>'+*/
+  '</category>'+ 
   '<category name="Operators" colour="#40BF4A" secondaryColour="#389438">'+
     '<block type="operator_add" id="operator_add">'+
       '<value name="NUM1">'+

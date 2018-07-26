@@ -135,27 +135,88 @@ Blockly.Blocks['sensing_distanceto'] = {
   }
 };
 
-Blockly.Blocks['sensing_distancetomenu'] = {
+Blockly.Blocks['sensing_ultrasonic'] = {
   /**
    * "Distance to [Object]" Block Menu.
    * @this Blockly.Block
    */
   init: function() {
     this.jsonInit({
-      "message0": "%1",
+      "message0": Blockly.Msg.SENSING_ULTRASONIC,
       "args0": [
         {
           "type": "field_dropdown",
-          "name": "DISTANCETOMENU",
-          "options": [
-            [Blockly.Msg.SENSING_DISTANCETO_POINTER, '_mouse_']
-          ]
+          "name": "PORT",
+          "options": Blockly.Arduino.Boards.selected.inputPort
         }
       ],
       "extensions": ["colours_sensing", "output_string"]
     });
   }
 };
+
+Blockly.Blocks['sensing_light'] = {
+  /**
+   * "Distance to [Object]" Block Menu.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SENSING_LIGHT,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "PORT",
+          "options": Blockly.Arduino.Boards.selected.inputPort
+        }
+      ],
+      "extensions": ["colours_sensing", "output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['sensing_touch'] = {
+  /**
+   * Block to Report if a key is pressed.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SENSING_TOUCH,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "PORT",
+          "options": Blockly.Arduino.Boards.selected.inputPort
+        }
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['sensing_tilt'] = {
+  /**
+   * Block to Report if a key is pressed.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SENSING_TILT,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "PORT",
+          "options": Blockly.Arduino.Boards.selected.inputPort
+        }
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "output_boolean"]
+    });
+  }
+};
+
 
 Blockly.Blocks['sensing_askandwait'] = {
   /**

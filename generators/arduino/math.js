@@ -33,6 +33,22 @@ Blockly.Arduino['math_positive_number'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+/**
+ * Generator for a numeric value (X).
+ * Arduino code: loop { X }
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {array} Completed code with order of operation.
+ */
+Blockly.Arduino['math_whole_number'] = function(block) {
+  // Numeric value.
+  var code = parseFloat(block.getFieldValue('NUM'));
+  if (code == Infinity) {
+    code = 'INFINITY';
+  } else if (code == -Infinity) {
+    code = '-INFINITY';
+  }
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
 
 /**
  * Generator for a numeric value (X).

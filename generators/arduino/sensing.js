@@ -11,11 +11,14 @@
  */
 'use strict';
 
-goog.provide('Blockly.Arduino.texts');
+goog.provide('Blockly.Arduino.sensing');
 
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino['text'] = function(block) {
-  var code = (block.getFieldValue('TEXT'));
+Blockly.Arduino['sensing_light'] = function(block) {
+  var dropdown_pin = block.getFieldValue('PORT');
+  //Blockly.Arduino.definitions_['define_elementory'] = '#include <elementory.h>\n';
+  Blockly.Arduino.addInclude('', '#include <elementory.h>');
+  var code = 'analogRead('+dropdown_pin+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };

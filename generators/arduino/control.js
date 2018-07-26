@@ -49,10 +49,48 @@ Blockly.Arduino['control_forever'] = function(block) {
 Blockly.Arduino['control_if'] = function(block) {
   var argument = Blockly.Arduino.valueToCode(block, 'CONDITION',
       Blockly.Arduino.ORDER_NONE) || 'false';
-  var sub = Blockly.Arduino.valueToCode(block, 'SUBSTACK',
-      Blockly.Arduino.ORDER_NONE) || 'false';
+  var sub = Blockly.Arduino.statementToCode(block, 'SUBSTACK');
   var code = "if(" + argument + "){\n";
   code += sub;
   code += "\n}";
+  return code;
+}
+
+
+/**
+ * Code generator for the if else Arduino block.
+ 
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {string} Completed code.
+ */
+Blockly.Arduino['control_if_else'] = function(block) {
+  var argument = Blockly.Arduino.valueToCode(block, 'CONDITION',
+      Blockly.Arduino.ORDER_NONE) || 'false';
+  var sub_if = Blockly.Arduino.statementToCode(block, 'SUBSTACK');
+  var sub_else = Blockly.Arduino.statementToCode(block, 'SUBSTACK2');
+
+  var code = "if(" + argument + "){\n";
+  code += sub_if;
+  code += "\n} \n";
+  code += "else { \n";
+  code += sub_else;
+  code += "\n} \n";
+
+  return code;
+}
+/**
+ * Code generator for the if else Arduino block.
+ 
+ * @param {!Blockly.Block} block Block to generate the code from.
+ * @return {string} Completed code.
+ */
+Blockly.Arduino['control_repeat'] = function(block) {
+  var arg_times = Blockly.Arduino.valueToCode(block, 'TIMES',
+      Blockly.Arduino.ORDER_NONE) || 'false';
+  var sub = Blockly.Arduino.statementToCode(block, 'SUBSTACK');
+
+  var code= "for(int loop_counter=0, loop_counter<" + arg_times + ", loop_counter++) {\n";
+  code += sub;
+  code += "\n} \n"
   return code;
 }

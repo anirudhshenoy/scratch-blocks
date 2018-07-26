@@ -120,8 +120,9 @@ Blockly.Arduino['operator_equals'] = function(block) {
  */
 Blockly.Arduino['operator_gt'] = function(block) {
   // Numeric value.
-  var X = Blockly.Arduino.valueToCode(
-      block, 'OPERAND1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+//  var X = Blockly.Arduino.valueToCode(
+//      block, 'OPERAND1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var X = Blockly.Arduino.valueToCode(block,'OPERAND1',Blockly.Arduino.ORDER_ATOMIC) || '0';
   var Y = Blockly.Arduino.valueToCode(
       block, 'OPERAND2', Blockly.Arduino.ORDER_ATOMIC) || '0';
   var code = X + '>' + Y ;
