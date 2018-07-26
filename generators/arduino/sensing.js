@@ -22,3 +22,27 @@ Blockly.Arduino['sensing_light'] = function(block) {
   var code = 'analogRead('+dropdown_pin+')';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
+
+Blockly.Arduino['sensing_ultrasonic'] = function(block) {
+  var dropdown_pin = block.getFieldValue('PORT');
+  //Blockly.Arduino.definitions_['define_elementory'] = '#include <elementory.h>\n';
+  Blockly.Arduino.addInclude('', '#include <elementory.h>');
+  var code = 'get_ultrasonic_distance('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['sensing_touch'] = function(block) {
+  var dropdown_pin = block.getFieldValue('PORT');
+  //Blockly.Arduino.definitions_['define_elementory'] = '#include <elementory.h>\n';
+  Blockly.Arduino.addInclude('', '#include <elementory.h>');
+  var code = 'touch_sensor('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['sensing_tilt'] = function(block) {
+  var dropdown_pin = block.getFieldValue('PORT');
+  //Blockly.Arduino.definitions_['define_elementory'] = '#include <elementory.h>\n';
+  Blockly.Arduino.addInclude('', '#include <elementory.h>');
+  var code = 'tilt_sensor('+dropdown_pin+')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};

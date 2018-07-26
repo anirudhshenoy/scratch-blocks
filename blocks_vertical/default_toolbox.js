@@ -29,15 +29,37 @@ goog.require('Blockly.Blocks');
  */
 
 Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: none">'+
-  '<category name="Motion" colour="#4C97FF" secondaryColour="#3373CC">'+
-    '<block type="motion_movesteps" id="motion_movesteps">'+
-      '<value name="STEPS">'+
+  '<category name="Output" colour="#4C97FF" secondaryColour="#3373CC">'+
+    '<block type="output_LED" id="output_LED"></block>' +
+    '<block type="output_laser" id="output_laser"></block>' +
+    '<block type="output_rainbow" id="output_rainbow">'+
+      '<value name="COLOR">'+
+        '<shadow type="colour_picker"></shadow>'+
+      '</value>'+
+      '<value name="BRIGHTNESS">'+
         '<shadow type="math_number">'+
-          '<field name="NUM">10</field>'+
+          '<field name="NUM">250</field>'+
         '</shadow>'+
       '</value>'+
     '</block>'+
-    '<block type="motion_turnright" id="motion_turnright">'+
+    '<block type="output_buzzer" id="output_buzzer">'+
+      '<value name="FREQUENCY">'+
+        '<shadow type="math_number">'+
+          '<field name="NUM">250</field>'+
+        '</shadow>'+
+      '</value>'+
+    '</block>'+
+    '<block type="output_servo" id="output_servo">'+
+      '<value name="ANGLE">'+
+        '<shadow type="math_angle">'+
+          '<field name="NUM">90</field>'+
+        '</shadow>'+
+      '</value>'+
+    '</block>' +
+
+
+
+/*    '<block type="motion_turnright" id="motion_turnright">'+
       '<value name="DEGREES">'+
         '<shadow type="math_number">'+
           '<field name="NUM">15</field>'+
@@ -143,6 +165,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     '<block type="motion_xposition" id="motion_xposition"></block>'+
     '<block type="motion_yposition" id="motion_yposition"></block>'+
     '<block type="motion_direction" id="motion_direction"></block>'+
+*/
   '</category>'+
   '<category name="Looks" colour="#9966FF" secondaryColour="#774DCB">'+
     '<block type="looks_show" id="looks_show"></block>'+
@@ -315,7 +338,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '<shadow type="colour_picker"></shadow>'+
       '</value>'+
     '</block>'+
-    '<block type="sensing_coloristouchingcolor" id="sensing_coloristouchingcolor">'+
+*/    '<block type="sensing_coloristouchingcolor" id="sensing_coloristouchingcolor">'+
       '<value name="COLOR">'+
         '<shadow type="colour_picker"></shadow>'+
       '</value>'+
@@ -323,7 +346,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '<shadow type="colour_picker"></shadow>'+
       '</value>'+
     '</block>'+
-*/  '<block type="sensing_ultrasonic" id="sensing_ultrasonic">'+
+  '<block type="sensing_ultrasonic" id="sensing_ultrasonic">'+
       '<value name="PORT">'+
         '<shadow type="sensing_ultrasonic"></shadow>'+
       '</value>'+
