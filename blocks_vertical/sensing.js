@@ -150,7 +150,7 @@ Blockly.Blocks['sensing_ultrasonic'] = {
           "options": Blockly.Arduino.Boards.selected.inputPort
         }
       ],
-      "extensions": ["colours_sensing", "output_string"]
+      "extensions": ["colours_sensing", "output_number"]
     });
   }
 };
@@ -170,7 +170,27 @@ Blockly.Blocks['sensing_light'] = {
           "options": Blockly.Arduino.Boards.selected.inputPort
         }
       ],
-      "extensions": ["colours_sensing", "output_string"]
+      "extensions": ["colours_sensing", "output_number"]
+    });
+  }
+};
+
+Blockly.Blocks['sensing_temperature'] = {
+  /**
+   * "Distance to [Object]" Block Menu.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SENSING_TEMPERATURE,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "PORT",
+          "options": Blockly.Arduino.Boards.selected.inputPort
+        }
+      ],
+      "extensions": ["colours_sensing", "output_number"]
     });
   }
 };

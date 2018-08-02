@@ -159,6 +159,7 @@ Blockly.Msg["SENSING_TOUCHINGCOLOR"] = "touching color %1?";
 Blockly.Msg["SENSING_COLORISTOUCHINGCOLOR"] = "color %1 is touching %2?";
 Blockly.Msg["SENSING_ULTRASONIC"] = "Distance using Ultrasonic %1";
 Blockly.Msg["SENSING_LIGHT"] = "Light Intensity %1";
+Blockly.Msg["SENSING_TEMPERATURE"] = "Temperature (Celsius) %1";
 Blockly.Msg["SENSING_TOUCH"] = "Touch Detected? %1";
 Blockly.Msg["SENSING_TILT"] = "Tilt Detected? %1";
 Blockly.Msg["SENSING_DISTANCETO_POINTER"] = "mouse-pointer";

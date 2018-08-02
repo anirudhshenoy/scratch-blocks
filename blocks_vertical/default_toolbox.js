@@ -351,20 +351,18 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
         '<shadow type="colour_picker"></shadow>'+
       '</value>'+
     '</block>'+
-*/    '<block type="sensing_coloristouchingcolor" id="sensing_coloristouchingcolor">'+
-      '<value name="COLOR">'+
-        '<shadow type="colour_picker"></shadow>'+
-      '</value>'+
-      '<value name="COLOR2">'+
-        '<shadow type="colour_picker"></shadow>'+
-      '</value>'+
-    '</block>'+
+*/
   '<block type="sensing_ultrasonic" id="sensing_ultrasonic">'+
       '<value name="PORT">'+
         '<shadow type="sensing_ultrasonic"></shadow>'+
       '</value>'+
     '</block>' +
     '<block type="sensing_light" id="sensing_light">'+
+      '<value name="PORT">'+
+        '<shadow type="sensing_light"></shadow>'+
+      '</value>'+
+    '</block>'+ 
+    '<block type="sensing_temperature" id="sensing_temperature">'+
       '<value name="PORT">'+
         '<shadow type="sensing_light"></shadow>'+
       '</value>'+
