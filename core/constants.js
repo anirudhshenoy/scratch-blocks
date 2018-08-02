@@ -250,6 +250,7 @@ Blockly.OUTPUT_SHAPE_SQUARE = 3;
  */
 Blockly.Categories = {
   "output":"output",
+  "display":"display",
   "motion": "motion",
   "looks": "looks",
   "sound": "sounds",

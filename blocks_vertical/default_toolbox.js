@@ -59,6 +59,7 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
 
 
 
+
 /*    '<block type="motion_turnright" id="motion_turnright">'+
       '<value name="DEGREES">'+
         '<shadow type="math_number">'+
@@ -166,6 +167,18 @@ Blockly.Blocks.defaultToolbox = '<xml id="toolbox-categories" style="display: no
     '<block type="motion_yposition" id="motion_yposition"></block>'+
     '<block type="motion_direction" id="motion_direction"></block>'+
 */
+  '</category>'+
+
+  '<category name="Display" colour="#9966FF" secondaryColour="#774DCB">'+
+  	'<block type="display_lcd" id="display_lcd">'+
+      '<value name="MESSAGE">'+
+        '<shadow type="text">'+
+          '<field name="TEXT">Enter Msg here....</field>'+
+        '</shadow>'+
+      '</value>'+
+    '</block>'+
+    '<block type="display_lcd_clear" id="display_lcd_clear">'+
+    '</block>'+
   '</category>'+
   '<category name="Looks" colour="#9966FF" secondaryColour="#774DCB">'+
     '<block type="looks_show" id="looks_show"></block>'+
