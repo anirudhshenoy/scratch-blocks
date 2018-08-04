@@ -378,3 +378,9 @@ Blockly.Arduino['math_random_int'] = function(block) {
 Blockly.Arduino['math_random_float'] = function(block) {
   return ['(rand() / RAND_MAX)', Blockly.Arduino.ORDER_UNARY_POSTFIX];
 };
+
+Blockly.Arduino['math_angle'] = function(block) {
+  // Numeric value.
+  var code = parseFloat(block.getFieldValue('NUM'));
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
