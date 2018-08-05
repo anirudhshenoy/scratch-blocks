@@ -129,6 +129,38 @@ Blockly.Arduino['operator_gt'] = function(block) {
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
 
+Blockly.Arduino['operator_and'] = function(block) {
+  // Numeric value.
+//  var X = Blockly.Arduino.valueToCode(
+//      block, 'OPERAND1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var X = Blockly.Arduino.valueToCode(block,'OPERAND1',Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var Y = Blockly.Arduino.valueToCode(
+      block, 'OPERAND2', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var code = '(' + X  + ')' + '&&' + '(' + Y + ')' ;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['operator_or'] = function(block) {
+  // Numeric value.
+//  var X = Blockly.Arduino.valueToCode(
+//      block, 'OPERAND1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var X = Blockly.Arduino.valueToCode(block,'OPERAND1',Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var Y = Blockly.Arduino.valueToCode(
+      block, 'OPERAND2', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var code = '(' + X  + ')' + '||' + '(' + Y + ')' ;
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
+Blockly.Arduino['operator_not'] = function(block) {
+  // Numeric value.
+//  var X = Blockly.Arduino.valueToCode(
+//      block, 'OPERAND1', Blockly.Arduino.ORDER_ATOMIC) || '0';
+  var X = Blockly.Arduino.valueToCode(block,'OPERAND',Blockly.Arduino.ORDER_ATOMIC) || '0';
+
+  var code = '!(' + X  + ')';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 
 /**
  * Generator for a numeric value (X).

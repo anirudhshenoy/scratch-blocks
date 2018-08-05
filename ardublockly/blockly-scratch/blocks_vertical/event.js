@@ -28,7 +28,7 @@ goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
 
-Blockly.Blocks['event_whenflagclicked'] = {
+Blockly.Blocks['event_start'] = {
   /**
    * Block for when flag clicked.
    * @this Blockly.Block
@@ -36,7 +36,7 @@ Blockly.Blocks['event_whenflagclicked'] = {
   init: function() {
     this.jsonInit({
       "id": "event_whenflagclicked",
-      "message0": Blockly.Msg.EVENT_WHENFLAGCLICKED,
+      "message0": Blockly.Msg.EVENT_START,
       "args0": [
         {
           "type": "field_image",
@@ -48,6 +48,30 @@ Blockly.Blocks['event_whenflagclicked'] = {
       ],
       "category": Blockly.Categories.event,
       "extensions": ["colours_event", "shape_hat"]
+    });
+  }
+};
+
+Blockly.Blocks['event_end'] = {
+  /**
+   * Block for when flag clicked.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "id": "event_whenflagclicked",
+      "message0": Blockly.Msg.EVENT_END,
+      "args0": [
+        {
+          "type": "field_image",
+          "src": Blockly.mainWorkspace.options.pathToMedia + "green-flag.svg",
+          "width": 24,
+          "height": 24,
+          "alt": "flag"
+        }
+      ],
+      "category": Blockly.Categories.event,
+      "extensions": ["colours_event", "shape_end"]
     });
   }
 };

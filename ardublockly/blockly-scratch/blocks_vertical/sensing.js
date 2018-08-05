@@ -155,6 +155,27 @@ Blockly.Blocks['sensing_ultrasonic'] = {
   }
 };
 
+Blockly.Blocks['sensing_humidity'] = {
+  /**
+   * "Distance to [Object]" Block Menu.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SENSING_HUMIDITY,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "PORT",
+          "options": Blockly.Arduino.Boards.selected.inputPort
+        }
+      ],
+      "extensions": ["colours_sensing", "output_number"]
+    });
+  }
+};
+
+
 Blockly.Blocks['sensing_light'] = {
   /**
    * "Distance to [Object]" Block Menu.
@@ -237,54 +258,19 @@ Blockly.Blocks['sensing_tilt'] = {
   }
 };
 
-
-Blockly.Blocks['sensing_askandwait'] = {
-  /**
-   * Block to ask a question and wait
-   * @this Blockly.Block
-   */
-  init: function() {
-    this.jsonInit({
-      "message0": Blockly.Msg.SENSING_ASKANDWAIT,
-      "args0": [
-        {
-          "type": "input_value",
-          "name": "QUESTION"
-        }
-      ],
-      "category": Blockly.Categories.sensing,
-      "extensions": ["colours_sensing", "shape_statement"]
-    });
-  }
-};
-
-Blockly.Blocks['sensing_answer'] = {
-  /**
-   * Block to report answer
-   * @this Blockly.Block
-   */
-  init: function() {
-    this.jsonInit({
-      "message0": Blockly.Msg.SENSING_ANSWER,
-      "category": Blockly.Categories.sensing,
-      "checkboxInFlyout": true,
-      "extensions": ["colours_sensing", "output_number"]
-    });
-  }
-};
-
-Blockly.Blocks['sensing_keypressed'] = {
+Blockly.Blocks['sensing_sound'] = {
   /**
    * Block to Report if a key is pressed.
    * @this Blockly.Block
    */
   init: function() {
     this.jsonInit({
-      "message0": Blockly.Msg.SENSING_KEYPRESSED,
+      "message0": Blockly.Msg.SENSING_SOUND,
       "args0": [
         {
-          "type": "input_value",
-          "name": "KEY_OPTION"
+          "type": "field_dropdown",
+          "name": "PORT",
+          "options": Blockly.Arduino.Boards.selected.inputPort
         }
       ],
       "category": Blockly.Categories.sensing,
@@ -292,6 +278,28 @@ Blockly.Blocks['sensing_keypressed'] = {
     });
   }
 };
+
+Blockly.Blocks['sensing_knock'] = {
+  /**
+   * Block to Report if a key is pressed.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SENSING_KNOCK,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "PORT",
+          "options": Blockly.Arduino.Boards.selected.inputPort
+        }
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "output_boolean"]
+    });
+  }
+};
+
 
 Blockly.Blocks['sensing_keyoptions'] = {
   /**

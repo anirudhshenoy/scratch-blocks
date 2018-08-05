@@ -11,11 +11,12 @@
  */
 'use strict';
 
-goog.provide('Blockly.Arduino.texts');
+goog.provide('Blockly.Arduino.colour');
 
 goog.require('Blockly.Arduino');
 
-Blockly.Arduino['text'] = function(block) {
-  var code = '\"' + block.getFieldValue('TEXT') + '\"';
+Blockly.Arduino['colour_picker'] = function(block) {
+  // Colour picker.
+  var code = '"' + block.getFieldValue('COLOUR') + '"';
   return [code, Blockly.Arduino.ORDER_ATOMIC];
 };
