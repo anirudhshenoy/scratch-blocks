@@ -17,17 +17,17 @@ goog.require('Blockly.Arduino');
 
 Blockly.Arduino['output_LED'] = function(block) {
   var dropdown_pin = block.getFieldValue('PORT');
-  //Blockly.Arduino.definitions_['define_elementory'] = '#include <elementory.h>\n';
+  var selected_option = block.getFieldValue('OPTION');
   Blockly.Arduino.addInclude('', '#include <elementory.h>');
-  var code = 'digitalWrite('+dropdown_pin+');\n';
+  var code = 'digitalWrite('+dropdown_pin+ ',' + selected_option + ');\n';
   return code;
 };
 
 Blockly.Arduino['output_laser'] = function(block) {
   var dropdown_pin = block.getFieldValue('PORT');
-  //Blockly.Arduino.definitions_['define_elementory'] = '#include <elementory.h>\n';
+  var selected_option = block.getFieldValue('OPTION');
   Blockly.Arduino.addInclude('', '#include <elementory.h>');
-  var code = 'digitalWrite('+dropdown_pin+');\n';
+  var code = 'digitalWrite('+dropdown_pin+ ',' + selected_option + ');\n';
   return code;
 };
 
